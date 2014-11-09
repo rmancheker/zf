@@ -46,6 +46,8 @@ Q) How to access the static class and static method?
 
 Q) path seperator for window and linux?
 
+
+Q) display error , display startup error and displayExceptions?
 	
 	
 	
