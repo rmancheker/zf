@@ -4,7 +4,6 @@
           $autoloader = new Zend_Application_Module_Autoloader(
                                array('namespace'=>'','basePath' => dirname(__FILE__))
                             );
-
             return $autoloader;
         }
         
@@ -17,9 +16,30 @@
             Zend_Registry::set('db_Adapter',$dbAdapter);
         }
         
-       
-      
-    
+        
+        function _initViewHelpers(){
+            $this->bootstrap('layout');
+            $layout = $this->getResource('layout');
+            $view = $layout->getView();
+            
+            $view->doctype('HTML4_STRICT');
+            
+            $view->headMeta()
+                ->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8')
+                ->appendHttpEquiv('Content-Language', 'en-US')
+                ->appendName('keywords', 'framework, PHP, stampingground.in');
+            
+           
+            $view->headTitle()->setSeparator(' - ');
+            $view->headTitle('::Zend Framework Project::');
+            $view->headLink()->appendStylesheet('/style.css');
+        
+        
+        }
+        
+        
+        
+        
     }
 
 

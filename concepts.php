@@ -48,8 +48,12 @@ Q) path seperator for window and linux?
 
 
 Q) display error , display startup error and displayExceptions?
+
+
+Q) View helpers & action helpers?
 	
 	
+
 	
 	
 	

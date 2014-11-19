@@ -1,8 +1,22 @@
-<?php include("header.phtml");?>
-<?php include("nav.phtml");?>
+<?php echo $this->doctype() ?>
 
-<?php echo $this->layout()->content ;?>
+<!DOCTYPE html>
+<html>
 
+    <head>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headTitle(); ?>
+       <link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl().'/css/style.css'; ?>" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+        <body class="body">
+            <?php echo $this->layout()->navigation; ?>
 
+            <?php echo $this->layout()->content; ?>
 
-<?php include("footer.phtml");?>
+            <?php echo $this->layout()->sidebar; ?>
+       
+            <?php echo $this->layout()->mainfooter; ?>
+        </body>
+</html>
